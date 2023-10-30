@@ -32,7 +32,7 @@ public class WiseSayingService {
         wiseSaying.setContent(content);
         wiseSaying.setAuthor(author);
     }
-    public WiseSaying wiseSayingFindById {
+    public WiseSaying wiseSayingFindById (long id) {
         for (WiseSaying wiseSaying : wiseSayingList) {
             if (wiseSaying.getId() == id) {
                 return wiseSaying;
