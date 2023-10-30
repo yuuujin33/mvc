@@ -1,4 +1,4 @@
-package org.example;
+package org.example.wisesaying.entity;
 
 import lombok.Getter;
 import lombok.Setter;

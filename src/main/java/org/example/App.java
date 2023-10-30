@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.controller.WiseSayingController;
+import org.example.wisesaying.controller.WiseSayingController;
 
 import java.util.Scanner;
 
