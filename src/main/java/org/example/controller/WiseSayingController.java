@@ -7,10 +7,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class WiseSayingController {
+    // 빨간 줄 해결 방안을 모르겠어요
+    // 이 다음 단계로 어떻게 해야할지 모르겠어요
     List<WiseSaying> wiseSayingList = new ArrayList<>();
     long id = 1;
 
-    public static void write() {
+    public void write() {
         System.out.printf("명언:");
         Scanner sc;
         String content = sc.nextLine();
@@ -23,14 +25,14 @@ public class WiseSayingController {
         id++;
     }
 
-    public static void list() {
+    public void list() {
         System.out.printf("번호 / 명언 / 작가\n");
         for (WiseSaying wiseSaying : wiseSayingList) {
             System.out.printf("%d / %s / %s\n", wiseSaying.getId(), wiseSaying.getContent(), wiseSaying.getAuthor());
         }
     }
 
-    public static void remove() {
+    public void remove() {
         System.out.println("삭제 번호 :");
         long removeId = sc.nextLong();
         sc.nextLine();
@@ -43,7 +45,7 @@ public class WiseSayingController {
         System.out.println(removeId + "번 명언이 삭제 되었습니다.");
     }
 
-    public static void modify() {
+    public void modify() {
         System.out.printf("수정 번호 :");
         long modifyId = sc.nextLong();
         sc.nextLine();
