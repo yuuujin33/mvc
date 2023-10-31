@@ -15,6 +15,7 @@ public class App {
             String command = sc.nextLine();
             if (command.equals("종료")) {
                 break;
+//                write, list, remove, modify 빨간줄
             } else if (command.equals("등록")) {
                 WiseSayingController.write();
             } else if (command.equals("목록")) {

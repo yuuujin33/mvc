@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class WiseSayingService {
     List<WiseSaying> wiseSayingList = new ArrayList<>();
     long lastid = 0;
-
+// 왜 long타입일까..?
     public long create(long id, String content, String author) {
         lastid++;
         WiseSaying wiseSaying = new WiseSaying(id, content, author);

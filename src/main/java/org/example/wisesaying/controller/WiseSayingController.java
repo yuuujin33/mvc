@@ -9,20 +9,20 @@ import java.util.Scanner;
 
 public class WiseSayingController {
     WiseSayingService wiseSayingService = new WiseSayingService();
-
+    // sc 다 빨간줄
     public void write() {
         System.out.printf("명언:");
         String content = sc.nextLine();
         System.out.printf("작가");
         String author = sc.nextLine();
 
-//        long id = WiseSayingService.create(content, author);
+//        long id = WiseSayingService.create(content, author); -> create 빨간줄
         System.out.printf(id + "번 명언이 등록되었습니다.");
     }
 
     public void list() {
         System.out.printf("번호 / 명언 / 작가\n");
-//        for (WiseSaying wiseSaying : wiseSayingList) {
+//        for (WiseSaying wiseSaying : wiseSayingList) { -> wiseSayingList 빨간줄
             System.out.printf("%d / %s / %s\n", wiseSaying.getId(), wiseSaying.getContent(), wiseSaying.getAuthor());
         }
         List<WiseSaying> wiseSayingList = wiseSayingService.list();
