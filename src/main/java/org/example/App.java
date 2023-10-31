@@ -9,7 +9,7 @@ public class App {
 
     void run() {
         System.out.println("== 명언 앱 ==");
-        WiseSayingController wiseSayingController = new WiseSayingController();
+        WiseSayingController wiseSayingController = new WiseSayingController(sc);
         while (true) {
             System.out.printf("명령어 :");
             String command = sc.nextLine();
@@ -17,13 +17,13 @@ public class App {
                 break;
 //                write, list, remove, modify 빨간줄
             } else if (command.equals("등록")) {
-                WiseSayingController.write();
+                wiseSayingController.write();
             } else if (command.equals("목록")) {
-                WiseSayingController.list();
+                wiseSayingController.list();
             } else if (command.equals("삭제")) {
-                WiseSayingController.remove();
+                wiseSayingController.remove();
             } else if (command.equals("수정")) {
-                WiseSayingController.modify();
+                wiseSayingController.modify();
             }
         }
         sc.close();

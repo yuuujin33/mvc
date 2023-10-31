@@ -8,24 +8,30 @@ import java.util.List;
 import java.util.Scanner;
 
 public class WiseSayingController {
+    Scanner sc;
+
     WiseSayingService wiseSayingService = new WiseSayingService();
     // sc 다 빨간줄
+    public WiseSayingController (Scanner sc) {
+        this.sc = sc;
+    }
+
     public void write() {
         System.out.printf("명언:");
         String content = sc.nextLine();
-        System.out.printf("작가");
+        System.out.printf("작가:");
         String author = sc.nextLine();
 
-//        long id = WiseSayingService.create(content, author); -> create 빨간줄
-        System.out.printf(id + "번 명언이 등록되었습니다.");
+        long id = wiseSayingService.create(content, author);
+        System.out.println(id + "번 명언이 등록되었습니다.");
     }
 
     public void list() {
-        System.out.printf("번호 / 명언 / 작가\n");
-//        for (WiseSaying wiseSaying : wiseSayingList) { -> wiseSayingList 빨간줄
-            System.out.printf("%d / %s / %s\n", wiseSaying.getId(), wiseSaying.getContent(), wiseSaying.getAuthor());
-        }
         List<WiseSaying> wiseSayingList = wiseSayingService.list();
+        System.out.println("번호 / 작가 / 명언");
+        for (WiseSaying wiseSaying : wiseSayingList) {
+            System.out.printf("%d, %s, %s \n", wiseSaying.getId(), wiseSaying.getAuthor(), wiseSaying.getContent());
+        }
     }
 
     public void remove() {
