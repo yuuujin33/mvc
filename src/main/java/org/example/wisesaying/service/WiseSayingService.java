@@ -18,7 +18,7 @@ public class WiseSayingService {
     }
 
     public List<WiseSaying> list() {
-        return this.wiseSayingList;
+        return this.list();
     }
 
     public void remove(WiseSaying wiseSaying) {

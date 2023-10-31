@@ -16,23 +16,23 @@ public class WiseSayingController {
         System.out.printf("작가");
         String author = sc.nextLine();
 
-        long id = WiseSayingService.create(content, author);
+//        long id = WiseSayingService.create(content, author);
         System.out.printf(id + "번 명언이 등록되었습니다.");
     }
 
     public void list() {
         System.out.printf("번호 / 명언 / 작가\n");
-        for (WiseSaying wiseSaying : wiseSayingList) {
+//        for (WiseSaying wiseSaying : wiseSayingList) {
             System.out.printf("%d / %s / %s\n", wiseSaying.getId(), wiseSaying.getContent(), wiseSaying.getAuthor());
         }
-        wiseSayingService.list();
+        List<WiseSaying> wiseSayingList = wiseSayingService.list();
     }
 
     public void remove() {
         System.out.println("삭제 번호 :");
         long removeId = sc.nextLong();
         sc.nextLine();
-//      WiseSayingService 연결..
+
         WiseSaying wiseSaying = wiseSayingService.wiseSayingFindById(removeId);
         wiseSayingService.remove(wiseSaying);
         System.out.println(removeId + "번 명언이 삭제 되었습니다.");
