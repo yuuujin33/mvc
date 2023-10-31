@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class App {
     Scanner sc = new Scanner(System.in);
-    WiseSayingController wiseSayingController = new WiseSayingController();
-    void run () {
-        System.out.println("== 명언 앱 ==");
 
+    void run() {
+        System.out.println("== 명언 앱 ==");
+        WiseSayingController wiseSayingController = new WiseSayingController();
         while (true) {
             System.out.printf("명령어 :");
             String command = sc.nextLine();

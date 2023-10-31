@@ -18,9 +18,6 @@ public class WiseSayingService {
     }
 
     public List<WiseSaying> list() {
-        for (WiseSaying wiseSaying : wiseSayingList) {
-            System.out.printf("%d / %s / %s\n", wiseSaying.getId(), wiseSaying.getContent(), wiseSaying.getAuthor());
-        }
         return this.wiseSayingList;
     }
 
@@ -38,5 +35,6 @@ public class WiseSayingService {
                 return wiseSaying;
             }
         }
+        return null;
     }
 }

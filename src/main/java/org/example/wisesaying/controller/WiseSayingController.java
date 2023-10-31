@@ -22,6 +22,9 @@ public class WiseSayingController {
 
     public void list() {
         System.out.printf("번호 / 명언 / 작가\n");
+        for (WiseSaying wiseSaying : wiseSayingList) {
+            System.out.printf("%d / %s / %s\n", wiseSaying.getId(), wiseSaying.getContent(), wiseSaying.getAuthor());
+        }
         wiseSayingService.list();
     }
 
@@ -39,7 +42,7 @@ public class WiseSayingController {
         System.out.printf("수정 번호 :");
         long modifyId = sc.nextLong();
         sc.nextLine();
-        WiseSaying wiseSaying = wiseSayingService.wiseSayingFindById(id);
+        WiseSaying wiseSaying = wiseSayingService.wiseSayingFindById(modifyId);
 
         System.out.printf("기존 명언 : %s\n", wiseSaying.getContent());
         String content = sc.nextLine();
